@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "author": "марк рыбицкий",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -137.55,
+      "left": -198,
+      "attrs": { "env": "micropython-20241129-v1.24.1" }
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": -128,
+      "left": -119.2,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": 53.4,
+      "left": 6.8,
+      "rotate": 180,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "lcd1:SCL", "pico:GP1", "green", [ "v-57.3", "h-76.8" ] ],
+    [ "lcd1:GND", "pico:GND.1", "green", [ "v0", "v-28.8", "h-76.8" ] ],
+    [ "lcd1:VCC", "pico:3V3", "green", [ "v0.1", "h-58.8" ] ],
+    [ "joystick1:VERT", "pico:GP28", "green", [ "v-13.2", "h-181", "v-134.4", "h-1.4", "v22.8" ] ],
+    [
+      "joystick1:HORZ",
+      "pico:GP27",
+      "green",
+      [ "v-13.2", "h-171.4", "v-104.4", "h-1.4", "v-7.2", "h0", "v19.2" ]
+    ],
+    [
+      "joystick1:SEL",
+      "pico:GP26",
+      "green",
+      [ "v-13.2", "h-161.8", "v-134.4", "h-1.4", "v51.6" ]
+    ],
+    [
+      "joystick1:GND",
+      "pico:GND.7",
+      "green",
+      [ "h1.4", "v-13.2", "h-153.6", "v-134.4", "h-1.4", "v32.4" ]
+    ],
+    [ "lcd1:SDA", "pico:GP0", "green", [ "v-47.8", "h-76.8" ] ]
+  ],
+  "dependencies": {}
+}

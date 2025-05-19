@@ -1,0 +1,33 @@
+{
+  "profile": {
+    "name": "Mark",
+    "age": "12"
+  },
+  "game": {
+    "words": [
+      "cat",
+      "dog",
+      "sun",
+      "tree",
+      "book",
+      "car",
+      "milk",
+      "water",
+      "apple",
+      "house",
+      "bird",
+      "fish",
+      "ball",
+      "pen",
+      "cup",
+      "bed",
+      "hat",
+      "shoe",
+      "rain"
+    ],
+    "history": [
+    ]
+  }
+}
+
+
